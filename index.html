@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 40px 0;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #0066cc;
+    }
+    main {
+      padding: 20px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome</h1>
+    <p>A simple landing page for your GitHub Pages site.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>This is a basic template to get you started. Customize it as needed.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Reach out via email or social media.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> My Site. Hosted on GitHub Pages.</p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
