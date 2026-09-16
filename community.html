@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Portal — Kurinda</title>
+<meta name="description" content="Information on the warning system and ground sensors supporting communities affected by landslides and flooding.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z"/><path d="M9 4v13"/><path d="M15 7v13"/></svg>
+      KURINDA
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <a href="project.html">Project</a>
+      <a href="community.html" class="active">Community</a>
+      <a href="alerts.html">Alerts</a>
+      <a href="team.html">Team</a>
+      <a href="updates.html">Updates</a>
+    </nav>
+    <span class="alert-pill"><span class="dot"></span> Current alert: low</span>
+  </div>
+</header>
+
+<div class="wrap page-head">
+  <div class="eyebrow">Community portal</div>
+  <h1>Know the signal. Take the next step.</h1>
+  <p>This page is dedicated to the communities directly affected by landslides and flooding, providing information on the warning system and ground sensors that will directly support the goal of monitoring and providing early warning to potential landslides in remote areas.</p>
+</div>
+
+<div class="wrap" style="padding-bottom:56px;">
+
+  <div class="status-card">
+    <div class="status-dot">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+    </div>
+    <div>
+      <h3>LOW · routine checks</h3>
+      <p>No immediate action is needed.</p>
+    </div>
+  </div>
+
+  <div class="risk-box">
+    <div class="eyebrow">How risk levels work</div>
+    <p>Satellite data and ground sensors feed the machine learning model. Its output is shown as a simple traffic-light warning.</p>
+    <div class="flow-row">
+      <span class="flow-chip">🛰 Satellite data</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-chip olive">📶 Ground sensors</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-chip dark">⚡ ML model</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-chip pale">Community warning</span>
+    </div>
+    <div class="risk-levels">
+      <div class="risk-level low"><div class="rl-title">GREEN · LOW</div><div class="rl-sub">Routine checks</div></div>
+      <div class="risk-level medium"><div class="rl-title">AMBER · MEDIUM</div><div class="rl-sub">Prepare early</div></div>
+      <div class="risk-level high"><div class="rl-title">RED · HIGH</div><div class="rl-sub">Act now</div></div>
+      <div class="risk-level extreme"><div class="rl-title">BLACK · EXTREME</div><div class="rl-sub">Leave safely</div></div>
+    </div>
+  </div>
+
+  <div class="tile-grid">
+    <div class="tile grey">
+      <span class="icon">📘</span>
+      <h3>Assembly guide</h3>
+      <p>Downloadable guide</p>
+    </div>
+    <div class="tile pale">
+      <span class="icon">📍</span>
+      <h3>Placement guide</h3>
+      <p>Locations to place ground sensor</p>
+    </div>
+    <div class="tile pale">
+      <span class="icon">⬆</span>
+      <h3>Upload field data</h3>
+      <p>Send today's observations</p>
+    </div>
+    <div class="tile grey">
+      <span class="icon">⚡</span>
+      <h3>Response guide</h3>
+      <p>Contacts and early steps</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>KURINDA · LOCAL SENSING, SHARED ACTION</span>
+    <span class="muted">Field research platform</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
