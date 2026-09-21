@@ -49,11 +49,23 @@
     <div class="eyebrow">How risk levels work</div>
     <p>Satellite data and ground sensors feed the machine learning model. Its output is shown as a simple traffic-light warning.</p>
     <div class="flow-row">
-      <span class="flow-chip">🛰 Satellite data</span>
+      <span class="flow-chip">
+        <!-- satellite -->
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 7 9 3 5 7l4 4"/><path d="m17 11 4 4-4 4-4-4"/><path d="m8 12 4 4 6-6-4-4Z"/><path d="m16 8 3-3"/><path d="M9 21a6 6 0 0 0-6-6"/></svg>
+        Satellite data
+      </span>
       <span class="flow-arrow">→</span>
-      <span class="flow-chip olive">📶 Ground sensors</span>
+      <span class="flow-chip olive">
+        <!-- ground sensor / radio tower -->
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9"/><path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5"/><circle cx="12" cy="9" r="2"/><path d="M16.2 4.8c2 2 2.26 5.11.8 7.47"/><path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1"/><path d="M9.5 18h5"/><path d="m8 22 4-11 4 11"/></svg>
+        Ground sensors
+      </span>
       <span class="flow-arrow">→</span>
-      <span class="flow-chip dark">⚡ ML model</span>
+      <span class="flow-chip dark">
+        <!-- processor / model -->
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M15 2v2M15 20v2M9 2v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg>
+        ML model
+      </span>
       <span class="flow-arrow">→</span>
       <span class="flow-chip pale">Community warning</span>
     </div>
@@ -66,23 +78,35 @@
   </div>
 
   <div class="tile-grid">
-    <div class="tile grey">
-      <span class="icon">📘</span>
+    <a class="tile grey" href="assembly-guide.html">
+      <span class="icon">
+        <!-- wrench (assembly) -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </span>
       <h3>Assembly guide</h3>
       <p>Downloadable guide</p>
-    </div>
+    </a>
     <div class="tile pale">
-      <span class="icon">📍</span>
+      <span class="icon">
+        <!-- map pin (placement) -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      </span>
       <h3>Placement guide</h3>
       <p>Locations to place ground sensor</p>
     </div>
     <div class="tile pale">
-      <span class="icon">⬆</span>
+      <span class="icon">
+        <!-- upload -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      </span>
       <h3>Upload field data</h3>
       <p>Send today's observations</p>
     </div>
     <div class="tile grey">
-      <span class="icon">⚡</span>
+      <span class="icon">
+        <!-- lifebuoy (response / help) -->
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+      </span>
       <h3>Response guide</h3>
       <p>Contacts and early steps</p>
     </div>
