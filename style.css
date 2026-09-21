@@ -697,38 +697,38 @@ h2.section-title {
   border-color: #3a3d40;
 }
 
-/* 2. Outline icons (replace emojis) */
+/* 2. Outline icons (replace emojis) — sized to roughly one capital letter */
 .ico,
 .tile .icon svg {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.6;
+  stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 .flow-chip .ico {
-  width: 16px;
-  height: 16px;
-  vertical-align: -3px;
-  margin-right: 6px;
+  width: 13px;
+  height: 13px;
+  vertical-align: -1px;
+  margin-right: 5px;
 }
 .tile .icon {
   display: inline-flex;
   margin-bottom: 8px;
 }
 .tile .icon svg {
-  width: 28px;
-  height: 28px;
+  width: 14px;
+  height: 14px;
 }
 
-/* 3. Traffic-light colours */
-.risk-level.low     { background: #2e7d32; color: #ffffff; border-color: #2e7d32; } /* green */
-.risk-level.medium  { background: #ffb300; color: #1a1a1a; border-color: #ffb300; } /* amber */
-.risk-level.high    { background: #d32f2f; color: #ffffff; border-color: #d32f2f; } /* red   */
-.risk-level.extreme { background: #000000; color: #ffffff; border-color: #000000; } /* black */
+/* 3. Traffic-light colours — !important so they beat any earlier rules on .risk-level */
+.risk-level.low     { background: #2e7d32 !important; color: #ffffff !important; border-color: #2e7d32 !important; } /* green */
+.risk-level.medium  { background: #ffb300 !important; color: #1a1a1a !important; border-color: #ffb300 !important; } /* amber */
+.risk-level.high    { background: #d32f2f !important; color: #ffffff !important; border-color: #d32f2f !important; } /* red   */
+.risk-level.extreme { background: #000000 !important; color: #ffffff !important; border-color: #000000 !important; } /* black */
 
 .risk-level .rl-title,
-.risk-level .rl-sub { color: inherit; }
+.risk-level .rl-sub { color: inherit !important; }
 .risk-level .rl-sub { opacity: 0.85; }
 
 /* 4. Assembly guide tile is now a link — remove default link styling */
