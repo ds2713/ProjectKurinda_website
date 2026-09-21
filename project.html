@@ -6,6 +6,44 @@
 <title>Project & Research — Kurinda</title>
 <meta name="description" content="Kurinda follows environmental change across connected study areas, pairing observed evidence with locally useful decisions.">
 <link rel="stylesheet" href="style.css">
+
+<style>
+  /* Black backgrounds -> very dark grey */
+  .panel-dark,
+  .feat-card.dark,
+  .site-footer {
+    background: #1c1c1c;
+  }
+
+  /* Photo inside the "Study areas" panel */
+  .panel-photo {
+    position: relative;
+    overflow: hidden;
+  }
+  .panel-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .panel-photo .pin-badge {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* PDF links in "Published papers & abstracts" */
+  .panel-split ul a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .panel-split ul a:hover,
+  .panel-split ul a:focus-visible {
+    text-decoration-thickness: 2px;
+  }
+</style>
 </head>
 <body>
 
@@ -41,6 +79,7 @@
       <p>Catchments, wetlands, fields, and settlements are monitored together, because changes move across boundaries. Human driven environmental change, including deforestation, mining and urbanisation are tracked through the latest satellite data to process its impact on the natural landscape and the landslide risk on vulnerable communities.</p>
     </div>
     <div class="panel-photo">
+      <img src="images/study-areas.png" alt="A satellite in orbit scanning forested land below, with the curve of the Earth and the atmosphere visible behind it" loading="lazy">
       <span class="pin-badge">📍 4 linked study zones</span>
     </div>
   </div>
@@ -104,9 +143,9 @@
       <div class="col">
         <h4>Published papers &amp; abstracts</h4>
         <ul>
-          <li>ISU paper summary 2025</li>
-          <li>IAC paper 2025</li>
-          <li>IAC paper 2026</li>
+          <li><a href="pdfs/ISU-paper-summary-2025.pdf" target="_blank" rel="noopener">ISU paper summary 2025</a></li>
+          <li><a href="pdfs/IAC-paper-2025.pdf" target="_blank" rel="noopener">IAC paper 2025</a></li>
+          <li><a href="pdfs/IAC-paper-2026.pdf" target="_blank" rel="noopener">IAC paper 2026</a></li>
         </ul>
       </div>
     </div>
