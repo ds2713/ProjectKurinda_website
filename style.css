@@ -687,3 +687,123 @@ h2.section-title {
   .wrap, .header-inner, .footer-inner { padding-left: 20px; padding-right: 20px; }
   .data-bar { flex-direction: column; gap: 14px; }
 }
+
+/* ==== Kurinda community page updates ==== */
+
+/* 1. ML model chip: dark grey */
+.flow-chip.dark {
+  background: #3a3d40;
+  color: #ffffff;
+  border-color: #3a3d40;
+}
+
+/* 2. Outline icons (replace emojis) */
+.ico,
+.tile .icon svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.flow-chip .ico {
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+  margin-right: 6px;
+}
+.tile .icon {
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+.tile .icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* 3. Traffic-light colours */
+.risk-level.low     { background: #2e7d32; color: #ffffff; border-color: #2e7d32; } /* green */
+.risk-level.medium  { background: #ffb300; color: #1a1a1a; border-color: #ffb300; } /* amber */
+.risk-level.high    { background: #d32f2f; color: #ffffff; border-color: #d32f2f; } /* red   */
+.risk-level.extreme { background: #000000; color: #ffffff; border-color: #000000; } /* black */
+
+.risk-level .rl-title,
+.risk-level .rl-sub { color: inherit; }
+.risk-level .rl-sub { opacity: 0.85; }
+
+/* 4. Assembly guide tile is now a link — remove default link styling */
+a.tile {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 5. Back link (assembly-guide.html and other sub-pages) */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+.back-link:hover { opacity: 1; }
+.back-link svg { flex-shrink: 0; }
+
+/* 6. Download button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px 18px;
+  background: #3a3d40;
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.download-btn:hover { background: #2a2c2e; }
+
+/* 7. Numbered steps list */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 44px;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #3a3d40;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.steps h3 { margin: 0 0 4px; }
+.steps p { margin: 0; }
+
+.note {
+  margin-top: 28px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  font-style: italic;
+}
