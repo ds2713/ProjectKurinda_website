@@ -6,6 +6,31 @@
 <title>Kurinda — Monitor change. Detect risk. Act early.</title>
 <meta name="description" content="Kurinda combines Earth Observation data, ground sensors, and community knowledge to improve early warning of floods and landslides.">
 <link rel="stylesheet" href="style.css">
+<style>
+/* ---- Edits (loaded after style.css so these take priority) ---- */
+
+/* Hero: photo background with a dark overlay so the text stays readable */
+.hero {
+  background:
+    linear-gradient(rgba(25, 25, 25, 0.35), rgba(25, 25, 25, 0.55)),
+    url("hero.jpg") center / cover no-repeat;
+}
+
+/* Black backgrounds -> dark grey */
+.workflow,
+.site-footer,
+.feat-card.dark {
+  background: #2b2b2b;
+}
+
+/* Workflow numbers + labels: all white (including the Risk prediction step) */
+.step .num,
+.step .label,
+.step.accent .num,
+.step.accent .label {
+  color: #fff;
+}
+</style>
 </head>
 <body>
 
@@ -92,4 +117,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>
+</html> 
