@@ -807,3 +807,53 @@ a.tile {
   opacity: 0.6;
   font-style: italic;
 }
+
+/* ==== Kurinda updates — round 2 ==== */
+
+/* Darker red for HIGH */
+.risk-level.high {
+  background: #c62828 !important;
+  border-color: #c62828 !important;
+}
+
+/* Black for the severe level */
+.risk-level.severe {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+/* Tile becomes a positioned box so the arrow can sit bottom-right */
+.tile {
+  position: relative;
+}
+.tile-arrow {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.6;
+}
+a.tile:hover .tile-arrow {
+  opacity: 1;
+}
+
+/* Back link, used on the new guide pages */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+.back-link:hover { opacity: 1; }
+.back-link svg { flex-shrink: 0; }
