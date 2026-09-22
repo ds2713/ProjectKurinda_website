@@ -857,3 +857,17 @@ a.tile:hover .tile-arrow {
 }
 .back-link:hover { opacity: 1; }
 .back-link svg { flex-shrink: 0; }
+
+/* Bottom tiles: dark grey instead of light grey */
+.tile.grey {
+  background: #3a3d40 !important;
+  border-color: #3a3d40 !important;
+  color: #ffffff !important;
+}
+.tile.grey h3,
+.tile.grey p {
+  color: #ffffff !important;
+}
+.tile.grey .icon svg {
+  stroke: #ffffff;
+}
