@@ -512,7 +512,7 @@ h2.section-title {
 .risk-level.low { background: var(--green); }
 .risk-level.medium { background: var(--amber); color: var(--amber-text); }
 .risk-level.high { background: var(--red); color: var(--red-text); }
-.risk-level.extreme { background: var(--black-alert); }
+.risk-level.severe { background: var(--black-alert); }
 
 /* ---------- Action tiles (community) ---------- */
 
@@ -725,7 +725,7 @@ h2.section-title {
 .risk-level.low     { background: #2e7d32 !important; color: #ffffff !important; border-color: #2e7d32 !important; } /* green */
 .risk-level.medium  { background: #ffb300 !important; color: #1a1a1a !important; border-color: #ffb300 !important; } /* amber */
 .risk-level.high    { background: #d32f2f !important; color: #ffffff !important; border-color: #d32f2f !important; } /* red   */
-.risk-level.extreme { background: #000000 !important; color: #ffffff !important; border-color: #000000 !important; } /* black */
+.risk-level.severe { background: #000000 !important; color: #ffffff !important; border-color: #000000 !important; } /* black */
 
 .risk-level .rl-title,
 .risk-level .rl-sub { color: inherit !important; }
