@@ -17,6 +17,49 @@
   }
   .back-link:hover, .back-link:focus-visible { transform: translateX(-3px); }
   .detail-list { margin: 16px 0 0; padding-left: 20px; line-height: 1.7; }
+
+  /* Article content */
+  .article { max-width: 780px; margin: 0 auto; }
+  .article h2 { margin: 48px 0 12px; }
+  .article p { line-height: 1.7; margin: 0 0 16px; }
+  .article .lead { font-size: 1.15em; }
+
+  /* ===== Spacing, line and alignment fixes ===== */
+
+  /* 1. Smaller gap between the intro text and the first heading */
+  .page-head { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+  .page-head p { margin-bottom: 0 !important; }
+  .page-head + section { padding-top: 24px !important; }
+  .article h2:first-child { margin-top: 0 !important; }
+
+  /* 2. Smaller gap between the end of the text and the grey box */
+  .article > :last-child { margin-bottom: 0 !important; }
+  .page-head + section { padding-bottom: 0 !important; }
+  section.tight { padding-top: 32px !important; margin-top: 0 !important; }
+
+  /* 3. Remove the light grey line in the grey box */
+  .panel-split,
+  .panel-split .col,
+  .panel-split .col h4 {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .panel-split .col::before,
+  .panel-split .col::after,
+  .panel-split::before,
+  .panel-split::after,
+  .panel-split .col h4::before,
+  .panel-split .col h4::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* 4. Align the two mini titles (Overview / What they measure) */
+  .panel-split { align-items: flex-start !important; }
+  .panel-split .col { padding-top: 0 !important; margin-top: 0 !important; }
+  .panel-split .col h4 { margin: 0 0 12px !important; padding: 0 !important; }
+  .panel-split .col > p,
+  .panel-split .col > .detail-list { margin-top: 0 !important; }
 </style>
 </head>
 <body>
@@ -45,6 +88,34 @@
   <h1>Ground sensors</h1>
   <p>Local readings enable the research system to include rapid feedback loops from live data.</p>
 </div>
+
+<section>
+  <div class="wrap">
+    <article class="article">
+
+      <h2>Ground Sensors: Filling the Gaps Satellites Leave Behind</h2>
+      <p class="lead">Satellites give us a powerful view from above, but they can be slow to revisit, limited in resolution, and slow to deliver data. Ground sensors help fill those gaps. They feed extra, high-resolution data into our software models, act as ground truth for satellite measurements, and can detect the tiny ground movements that hint at instability, which space-based observation can easily miss.</p>
+
+      <h2>What we've done</h2>
+      <p>We've built and demonstrated a prototype sensor to prove the concept and learn what it takes to deploy a network in remote areas. Cost was our main driver. Existing solutions, even the "cheap" ones, often run to several hundred USD per node, and industrial systems are quoted individually. That works for mining or wealthy regions, but not for covering huge areas in the developing world.</p>
+      <p>So we focused on the measurements that matter most for predicting floods and landslides, and chose components that come both as easy-to-use breakout boards and as bare chips. This means the first prototype can be assembled by hand with minimal tools, even in a classroom or community centre, and later redesigned into a much more compact, cheaper version using the same control software.</p>
+      <p>Our first prototype has a bill of materials of around GBP 50, plus GBP 40 for the circuit board. At larger scale we expect a complete sensor for under USD 100, and the compact version should come in far lower still.</p>
+
+      <h2>What's new</h2>
+      <ul class="detail-list">
+        <li><strong>Long-range mesh networking:</strong> Sensors use low-power LoRa radio and an open-source mesh network (LoRaMesher), relaying measurements from node to node until they reach an internet-connected gateway. This extends coverage and makes the network more resilient.</li>
+        <li><strong>Self-sufficient power:</strong> A small solar panel recharges each battery, and the radio only switches on when it needs to transmit, so no one has to climb a hillside to swap batteries.</li>
+        <li><strong>Smart movement detection:</strong> An on-board accelerometer helps each sensor tell the difference between an animal bumping into it and a genuine landslide that needs to be reported.</li>
+        <li><strong>Natural, local materials:</strong> We're exploring bamboo housings, which keep costs and environmental impact down and support local fabrication with basic tools rather than expensive equipment like 3D printers.</li>
+      </ul>
+
+      <h2>What's next</h2>
+      <p>We'll test the sensors on landslide simulators to validate their performance. We'll also combine ground and satellite data, using soil moisture and movement readings to verify what satellites see, such as urban expansion and vegetation loss. Feeding this into our machine learning model should give Rwanda a more accurate landslide susceptibility picture, one that reflects the real impact of human land use.</p>
+      <p>Everything is open source, and the full design documentation is on our GitHub page, linked from kurinda.space.</p>
+
+    </article>
+  </div>
+</section>
 
 <section class="tight">
   <div class="wrap">
