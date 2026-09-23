@@ -17,6 +17,21 @@
   }
   .back-link:hover, .back-link:focus-visible { transform: translateX(-3px); }
   .detail-list { margin: 16px 0 0; padding-left: 20px; line-height: 1.7; }
+
+  /* Article content */
+  .article { max-width: 780px; margin: 0 auto; }
+  .article h2 { margin: 48px 0 12px; }
+  .article h2:first-child { margin-top: 0; }
+  .article p { line-height: 1.7; margin: 0 0 16px; }
+  .article .lead { font-size: 1.15em; }
+  .article figure { margin: 32px 0; }
+  .article figure img {
+    display: block; width: 100%; height: auto;
+    border-radius: 8px; background: #fff;
+  }
+  .article figcaption {
+    margin-top: 10px; font-size: 14px; line-height: 1.5; opacity: .75;
+  }
 </style>
 </head>
 <body>
@@ -63,6 +78,30 @@
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <article class="article">
+
+      <h2>Technology and Innovation</h2>
+      <p class="lead">Satellite Earth Observation provides a continuous, wide-area view of the Earth's surface that is difficult to achieve through ground-based monitoring alone. Different satellite technologies provide different pieces of the picture.</p>
+      <p>Optical imagery can show changes in land cover and vegetation, while Synthetic Aperture Radar (SAR) can monitor through cloud and darkness, map flood extent and detect ground movement linked to landslide risk. Elevation data can also identify terrain and areas more susceptible to flooding and slope instability.</p>
+      <p>These technologies are already being used around the world, but there is still a significant gap between what is technically possible and what is available as an operational early warning system. In Rwanda, satellite based flood forecasting has already demonstrated a 72% hit rate with a three hour lead time, showing that near-real-time forecasting is possible, but this has not yet developed into a standing operational system.</p>
+
+      <h2>Bringing the data together</h2>
+      <p>Flood and landslide risk is not caused by a single factor. Changes to the landscape can significantly alter how water moves through an area and contribute to increasing risk. Between 1991 and 2020, forest cover in the Rwanda Hydro-Unity Network catchment fell from 49.9% to 11.8%, while cropland increased from 33.2% to 72.0%. Over the same period, modelled surface runoff increased from 145 mm to 202 mm.</p>
+      <p>Satellite data can monitor these changes over time, helping to understand not only where hazards occur, but also some of the conditions contributing to them. Deforestation, urbanisation and mining can all alter water infiltration, drainage and ground stability.</p>
+      <p>However, satellite data has limitations. Sentinel-1 and Sentinel-2 can revisit an area in approximately 5 days, while Landsat has a 16 day revisit period. Cloud cover can also make optical imagery unusable, and processing and validation can add further delays. In one established near-real-time system, DETER-R in Brazil, the delay between disturbance and an issued warning can still be 18 to 24 days.</p>
+
+      <h2>The Kurinda approach</h2>
+      <p>Kurinda combines complementary technologies rather than relying on satellite data alone.</p>
+      <p>Satellite Earth Observation provides the large-scale picture, while low-cost ground sensors provide continuous, local measurements such as soil moisture and ground movement. These datasets can be combined with machine learning and cloud-based processing to identify changing conditions and support earlier detection of potential hazards.</p>
+      <p>This approach addresses one of the key limitations of satellite monitoring: the trade-off between wide-area coverage and continuous local information. Satellite imagery can show what is happening across a landscape, while ground sensors can provide continuous measurements at specific locations.</p>
+      <p>The technology is therefore not the innovation on its own. The opportunity lies in bringing existing satellite capabilities, low-cost ground monitoring and predictive modelling together in a single operational system designed around the communities who need the information. Research into Early Warning Systems has already identified this integration of complementary technologies as an opportunity to improve flood and landslide monitoring.</p>
+
+    </article>
   </div>
 </section>
 
