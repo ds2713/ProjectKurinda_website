@@ -32,7 +32,7 @@
     margin-top: 10px; font-size: 14px; line-height: 1.5; opacity: .75;
   }
 
-  /* ===== Spacing and line fixes ===== */
+  /* ===== Spacing, line and alignment fixes ===== */
 
   /* 1. Smaller gap between the intro text and "Smarter Flood Mapping" */
   .page-head { padding-bottom: 0 !important; margin-bottom: 0 !important; }
@@ -45,7 +45,7 @@
   .page-head + section { padding-bottom: 0 !important; }
   section.tight { padding-top: 32px !important; margin-top: 0 !important; }
 
-  /* 3. Remove the light grey line on the left of the grey box */
+  /* 3. Remove the light grey line in the grey box */
   .panel-split,
   .panel-split .col,
   .panel-split .col h4 {
@@ -61,6 +61,13 @@
     display: none !important;
     content: none !important;
   }
+
+  /* 4. Align the two mini titles (Overview / How it fits in) */
+  .panel-split { align-items: flex-start !important; }
+  .panel-split .col { padding-top: 0 !important; margin-top: 0 !important; }
+  .panel-split .col h4 { margin: 0 0 12px !important; padding: 0 !important; }
+  .panel-split .col > p,
+  .panel-split .col > .detail-list { margin-top: 0 !important; }
 </style>
 </head>
 <body>
@@ -132,8 +139,7 @@
   </div>
 </section>
 
-
-      <section class="tight">
+<section class="tight">
   <div class="wrap">
     <div class="panel-split">
       <div class="col">
