@@ -73,6 +73,19 @@
     opacity: 1;
     transform: translateX(3px);
   }
+
+  /* ===== Spacing and alignment fixes ===== */
+
+  /* 1. Smaller gap between the Methods loop and the Research header */
+  .methods-section { padding-bottom: 0 !important; }
+  .methods-section + section.tight { padding-top: 32px !important; }
+
+  /* 2. Align the two mini titles (Project history / Published papers & abstracts) */
+  .panel-split { align-items: flex-start !important; }
+  .panel-split .col { padding-top: 0 !important; margin-top: 0 !important; }
+  .panel-split .col h4 { margin: 0 0 12px !important; padding: 0 !important; }
+  .panel-split .col > p,
+  .panel-split .col > ul { margin-top: 0 !important; }
 </style>
 </head>
 <body>
@@ -115,7 +128,7 @@
   </div>
 </div>
 
-<section>
+<section class="methods-section">
   <div class="wrap">
     <div class="eyebrow">Methods</div>
     <h2 class="section-title">A simple evidence loop.</h2>
@@ -165,22 +178,13 @@
       <h4>Project history</h4>
       <p>Kurinda began with the aim to integrate a distributed monitoring and early warning system with Earth Observation data and low-cost ground-based sensors measuring soil moisture, ground movement and temperature. Such instruments can be integrated into solar powered devices which collect and transmit data, helping to build a network of sensors which can contribute to improved climate models while also warning communities about hazardous conditions developing nearby.</p>
     </div>
-    <div>
-      <div class="col">
-        <h4>Partner organisations</h4>
-        <div class="links">
-          <span>The Rwandan Space Agency</span>
-          <span>Star Vision</span>
-        </div>
-      </div>
-      <div class="col">
-        <h4>Published papers &amp; abstracts</h4>
-        <ul>
-          <li><a href="IAC-paper-2026.pdf" target="_blank" rel="noopener">IAC paper 2026</a></li>
-          <li><a href="IAC-paper-2025.pdf" target="_blank" rel="noopener">IAC paper 2025</a></li>
-          <li><a href="ISU-paper-summary-2025.pdf" target="_blank" rel="noopener">ISU paper summary 2025</a></li>
-        </ul>
-      </div>
+    <div class="col">
+      <h4>Published papers &amp; abstracts</h4>
+      <ul>
+        <li><a href="IAC-paper-2026.pdf" target="_blank" rel="noopener">IAC paper 2026</a></li>
+        <li><a href="IAC-paper-2025.pdf" target="_blank" rel="noopener">IAC paper 2025</a></li>
+        <li><a href="ISU-paper-summary-2025.pdf" target="_blank" rel="noopener">ISU paper summary 2025</a></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -191,6 +195,10 @@
     <span class="muted">Field research platform</span>
   </div>
 </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
 
 <script src="script.js"></script>
 </body>
