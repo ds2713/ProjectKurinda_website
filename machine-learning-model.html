@@ -17,6 +17,20 @@
   }
   .back-link:hover, .back-link:focus-visible { transform: translateX(-3px); }
   .detail-list { margin: 16px 0 0; padding-left: 20px; line-height: 1.7; }
+
+  /* Article content */
+  .article { max-width: 780px; margin: 0 auto; }
+  .article h2 { margin: 48px 0 12px; }
+  .article p { line-height: 1.7; margin: 0 0 16px; }
+  .article .lead { font-size: 1.15em; }
+  .article figure { margin: 32px 0; }
+  .article figure img {
+    display: block; width: 100%; height: auto;
+    border-radius: 8px; background: #fff;
+  }
+  .article figcaption {
+    margin-top: 10px; font-size: 14px; line-height: 1.5; opacity: .75;
+  }
 </style>
 </head>
 <body>
@@ -62,6 +76,48 @@
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <article class="article">
+
+      <h2>Smarter Flood Mapping: Adding the Human Footprint</h2>
+      <p class="lead">Most flood models look at the land as nature made it: rivers, slopes and rainfall. But in places like Rwanda's Nyabarongo catchment, people are reshaping the land fast. Roads, buildings and lost wetlands all change where water goes. The Kurinda project set out to test whether satellite data could capture that human footprint and make flood prediction more accurate.</p>
+
+      <h2>What has been done</h2>
+      <p>The project began by reproducing an existing ten-variable Random Forest flood model for the Nyabarongo catchment. The catchment was divided into more than 213,000 grid cells of roughly 200 m each, giving a trusted baseline to build on.</p>
+      <p>A gap soon became clear. Studies of urban flooding repeatedly rank impervious surfaces (hard ground that water cannot soak into) among the top predictors of flood risk, yet the baseline model did not include them directly. To address this, new predictors were built from free Sentinel-2 satellite imagery, processed using Google Earth Engine and QGIS.</p>
+
+      <h2>What is new</h2>
+      <p>Three human-impact variables were developed and tested:</p>
+      <ul class="detail-list">
+        <li><strong>Built-up percentage:</strong> how much of each grid cell is covered by buildings and hard surfaces.</li>
+        <li><strong>Vegetation change:</strong> how much greenness was lost between a 2018-19 baseline and 2023.</li>
+        <li><strong>Wetness decline:</strong> areas of previously wet land that have dried out, a sign of lost natural flood buffering.</li>
+      </ul>
+      <p style="margin-top:16px;">To avoid mistaking seasonal cycles for genuine change, the same months (July to December) were compared across years, and clouds and shadows were masked out of all imagery.</p>
+
+      <figure>
+        <img src="fig1-feature-importance-baseline-vs-experiment2.png" alt="Bar charts comparing variable importance in the baseline model and in Experiment 2, where distance to river ranks highest in both." loading="lazy">
+        <figcaption>Figure 1: Which variables matter most. Distance to river dominates in both models, but adding built-up percentage reshuffles the rankings of the rest.</figcaption>
+      </figure>
+
+      <h2>What was found</h2>
+      <p>The strongest result came from adding built-up percentage alongside the existing curve number. This lifted model accuracy from 92% to 97%, and the agreement score (Cohen's Kappa) rose from 0.84 to 0.93.</p>
+      <p>At first glance, the overall flood susceptibility map looks similar to the baseline. A closer pixel-by-pixel comparison shows otherwise: around 21% of pixels changed. The improved model is picking up local detail that the original missed.</p>
+
+      <figure>
+        <img src="fig2-flood-susceptibility-difference-map.png" alt="Flood susceptibility map with red areas highlighting where the improved model differs from the baseline." loading="lazy">
+        <figcaption>Figure 2: Red areas show where the improved model differs noticeably from the baseline flood susceptibility map.</figcaption>
+      </figure>
+
+      <h2>What comes next</h2>
+      <p>Satellites can only reveal so much. The next step is to combine these results with low-cost ground sensors, using measured soil moisture and ground movement to verify what the satellites see and sharpen the model further. The aim is a more accurate picture of how human land use shapes flood and landslide risk across Rwanda.</p>
+      <p>Everything is open source, with full documentation available on the project's GitHub page.</p>
+
+    </article>
   </div>
 </section>
 
