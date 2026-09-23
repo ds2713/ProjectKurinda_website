@@ -21,17 +21,45 @@
   /* Article content */
   .article { max-width: 780px; margin: 0 auto; }
   .article h2 { margin: 48px 0 12px; }
-  .article h2:first-child { margin-top: 0; }
   .article p { line-height: 1.7; margin: 0 0 16px; }
   .article .lead { font-size: 1.15em; }
-  .article figure { margin: 32px 0; }
-  .article figure img {
-    display: block; width: 100%; height: auto;
-    border-radius: 8px; background: #fff;
+
+  /* ===== Spacing, line and alignment fixes ===== */
+
+  /* 1. Smaller gap between the intro text and the first heading */
+  .page-head { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+  .page-head p { margin-bottom: 0 !important; }
+  .page-head + section { padding-top: 24px !important; }
+  .article h2:first-child { margin-top: 0 !important; }
+
+  /* 2. Smaller gap between the end of the text and the grey box */
+  .article > :last-child { margin-bottom: 0 !important; }
+  .page-head + section { padding-bottom: 0 !important; }
+  section.tight { padding-top: 32px !important; margin-top: 0 !important; }
+
+  /* 3. Remove the light grey line in the grey box */
+  .panel-split,
+  .panel-split .col,
+  .panel-split .col h4 {
+    border: 0 !important;
+    box-shadow: none !important;
   }
-  .article figcaption {
-    margin-top: 10px; font-size: 14px; line-height: 1.5; opacity: .75;
+  .panel-split .col::before,
+  .panel-split .col::after,
+  .panel-split::before,
+  .panel-split::after,
+  .panel-split .col h4::before,
+  .panel-split .col h4::after {
+    display: none !important;
+    content: none !important;
   }
+
+  /* 4. Align the two mini titles (Overview / What is tracked) */
+  .panel-split { align-items: flex-start !important; }
+  .panel-split .col { padding-top: 0 !important; margin-top: 0 !important; }
+  .panel-split .col h4 { margin: 0 0 12px !important; padding: 0 !important; }
+  .panel-split .col > p,
+  .panel-split .col > .detail-list { margin-top: 0 !important; }
 </style>
 </head>
 <body>
@@ -61,26 +89,6 @@
   <p>Indicators of hydrology, vegetation and land-surface change using satellite data.</p>
 </div>
 
-<section class="tight">
-  <div class="wrap">
-    <div class="panel-split">
-      <div class="col">
-        <h4>Overview</h4>
-        <p>Satellite Earth Observation gives Kurinda a consistent view of every study area. Changes such as deforestation, mining and urbanisation are tracked over time, so their impact on the natural landscape and on landslide risk for vulnerable communities can be assessed.</p>
-      </div>
-      <div class="col">
-        <h4>What we track</h4>
-        <ul class="detail-list">
-          <li>Hydrology and surface water</li>
-          <li>Vegetation cover and loss</li>
-          <li>Land-surface change from mining and urbanisation</li>
-          <li>Conditions that feed into the machine learning model</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section>
   <div class="wrap">
     <article class="article">
@@ -102,6 +110,26 @@
       <p>The technology is therefore not the innovation on its own. The opportunity lies in bringing existing satellite capabilities, low-cost ground monitoring and predictive modelling together in a single operational system designed around the communities who need the information. Research into Early Warning Systems has already identified this integration of complementary technologies as an opportunity to improve flood and landslide monitoring.</p>
 
     </article>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="panel-split">
+      <div class="col">
+        <h4>Overview</h4>
+        <p>Satellite Earth Observation gives Kurinda a consistent view of every study area. Changes such as deforestation, mining and urbanisation are tracked over time, so their impact on the natural landscape and on landslide risk for vulnerable communities can be assessed.</p>
+      </div>
+      <div class="col">
+        <h4>What is tracked</h4>
+        <ul class="detail-list">
+          <li>Hydrology and surface water</li>
+          <li>Vegetation cover and loss</li>
+          <li>Land-surface change from mining and urbanisation</li>
+          <li>Conditions that feed into the machine learning model</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
