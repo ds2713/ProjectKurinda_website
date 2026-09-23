@@ -641,11 +641,11 @@ h2.section-title {
 
 .news-photo {
   height: 150px;
-  background: linear-gradient(135deg, #3a5528 0%, #7a9457 50%, #2f4423 100%);
+  background-color: #7a9457;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-.news-photo.b { background: linear-gradient(135deg, #7a9ba8 0%, #c7d3d6 60%, #9ab0ab 100%); }
-.news-photo.c { background: linear-gradient(135deg, #d99a4e 0%, #e7c17a 45%, #6d8a4d 100%); }
 
 .news-card .news-body { padding: 20px; }
 .news-card .date { font-size: 0.78rem; color: var(--muted); margin-bottom: 8px; }
