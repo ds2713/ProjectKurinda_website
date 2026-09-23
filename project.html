@@ -74,13 +74,30 @@
     transform: translateX(3px);
   }
 
-  /* ===== Spacing and alignment fixes ===== */
+  /* ===== Spacing, line and alignment fixes ===== */
 
   /* 1. Smaller gap between the Methods loop and the Research header */
   .methods-section { padding-bottom: 0 !important; }
   .methods-section + section.tight { padding-top: 32px !important; }
 
-  /* 2. Align the two mini titles (Project history / Published papers & abstracts) */
+  /* 2. Remove the light grey line in the grey box */
+  .panel-split,
+  .panel-split .col,
+  .panel-split .col h4 {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .panel-split .col::before,
+  .panel-split .col::after,
+  .panel-split::before,
+  .panel-split::after,
+  .panel-split .col h4::before,
+  .panel-split .col h4::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* 3. Align the two mini titles (Project history / Published papers & abstracts) */
   .panel-split { align-items: flex-start !important; }
   .panel-split .col { padding-top: 0 !important; margin-top: 0 !important; }
   .panel-split .col h4 { margin: 0 0 12px !important; padding: 0 !important; }
@@ -195,10 +212,6 @@
     <span class="muted">Field research platform</span>
   </div>
 </footer>
-
-<script src="script.js"></script>
-</body>
-</html>
 
 <script src="script.js"></script>
 </body>
