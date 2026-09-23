@@ -94,24 +94,24 @@
     <article class="article">
 
       <h2>Ground Sensors: Filling the Gaps Satellites Leave Behind</h2>
-      <p class="lead">Satellites give us a powerful view from above, but they can be slow to revisit, limited in resolution, and slow to deliver data. Ground sensors help fill those gaps. They feed extra, high-resolution data into our software models, act as ground truth for satellite measurements, and can detect the tiny ground movements that hint at instability, which space-based observation can easily miss.</p>
+      <p class="lead">Satellites provide a powerful view from above, but they can be slow to revisit, limited in resolution, and slow to deliver data. Ground sensors help fill those gaps. They feed additional, high-resolution data into the project's software models, act as ground truth for satellite measurements, and can detect the tiny ground movements that hint at instability, which space-based observation can easily miss.</p>
 
-      <h2>What we've done</h2>
-      <p>We've built and demonstrated a prototype sensor to prove the concept and learn what it takes to deploy a network in remote areas. Cost was our main driver. Existing solutions, even the "cheap" ones, often run to several hundred USD per node, and industrial systems are quoted individually. That works for mining or wealthy regions, but not for covering huge areas in the developing world.</p>
-      <p>So we focused on the measurements that matter most for predicting floods and landslides, and chose components that come both as easy-to-use breakout boards and as bare chips. This means the first prototype can be assembled by hand with minimal tools, even in a classroom or community centre, and later redesigned into a much more compact, cheaper version using the same control software.</p>
-      <p>Our first prototype has a bill of materials of around GBP 50, plus GBP 40 for the circuit board. At larger scale we expect a complete sensor for under USD 100, and the compact version should come in far lower still.</p>
+      <h2>What has been done</h2>
+      <p>A prototype sensor has been built and demonstrated to prove the concept and to learn what it takes to deploy a network in remote areas. Cost was the main driver. Existing solutions, even the "cheap" ones, often run to several hundred USD per node, and industrial systems are quoted individually. That works for mining or wealthy regions, but not for covering huge areas in the developing world.</p>
+      <p>The design therefore focuses on the measurements that matter most for predicting floods and landslides, using components that come both as easy-to-use breakout boards and as bare chips. This means the first prototype can be assembled by hand with minimal tools, even in a classroom or community centre, and later redesigned into a much more compact, cheaper version using the same control software.</p>
+      <p>The first prototype has a bill of materials of around GBP 50, plus GBP 40 for the circuit board. At larger scale, a complete sensor is expected to cost under USD 100, and the compact version should come in far lower still.</p>
 
-      <h2>What's new</h2>
+      <h2>What is new</h2>
       <ul class="detail-list">
         <li><strong>Long-range mesh networking:</strong> Sensors use low-power LoRa radio and an open-source mesh network (LoRaMesher), relaying measurements from node to node until they reach an internet-connected gateway. This extends coverage and makes the network more resilient.</li>
         <li><strong>Self-sufficient power:</strong> A small solar panel recharges each battery, and the radio only switches on when it needs to transmit, so no one has to climb a hillside to swap batteries.</li>
         <li><strong>Smart movement detection:</strong> An on-board accelerometer helps each sensor tell the difference between an animal bumping into it and a genuine landslide that needs to be reported.</li>
-        <li><strong>Natural, local materials:</strong> We're exploring bamboo housings, which keep costs and environmental impact down and support local fabrication with basic tools rather than expensive equipment like 3D printers.</li>
+        <li><strong>Natural, local materials:</strong> Bamboo housings are being explored, which keep costs and environmental impact down and support local fabrication with basic tools rather than expensive equipment like 3D printers.</li>
       </ul>
 
-      <h2>What's next</h2>
-      <p>We'll test the sensors on landslide simulators to validate their performance. We'll also combine ground and satellite data, using soil moisture and movement readings to verify what satellites see, such as urban expansion and vegetation loss. Feeding this into our machine learning model should give Rwanda a more accurate landslide susceptibility picture, one that reflects the real impact of human land use.</p>
-      <p>Everything is open source, and the full design documentation is on our GitHub page, linked from kurinda.space.</p>
+      <h2>What comes next</h2>
+      <p>The sensors will be tested on landslide simulators to validate their performance. Ground and satellite data will also be combined, using soil moisture and movement readings to verify what satellites see, such as urban expansion and vegetation loss. Feeding this into the machine learning model should give Rwanda a more accurate landslide susceptibility picture, one that reflects the real impact of human land use.</p>
+      <p>Everything is open source, and the full design documentation is available on the project's GitHub page, linked from kurinda.space.</p>
 
     </article>
   </div>
