@@ -31,6 +31,36 @@
   .article figcaption {
     margin-top: 10px; font-size: 14px; line-height: 1.5; opacity: .75;
   }
+
+  /* ===== Spacing and line fixes ===== */
+
+  /* 1. Smaller gap between the intro text and "Smarter Flood Mapping" */
+  .page-head { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+  .page-head p { margin-bottom: 0 !important; }
+  .page-head + section { padding-top: 24px !important; }
+  .article h2:first-child { margin-top: 0 !important; }
+
+  /* 2. Smaller gap between the end of the text and the grey box */
+  .article > :last-child { margin-bottom: 0 !important; }
+  .page-head + section { padding-bottom: 0 !important; }
+  section.tight { padding-top: 32px !important; margin-top: 0 !important; }
+
+  /* 3. Remove the light grey line on the left of the grey box */
+  .panel-split,
+  .panel-split .col,
+  .panel-split .col h4 {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .panel-split .col::before,
+  .panel-split .col::after,
+  .panel-split::before,
+  .panel-split::after,
+  .panel-split .col h4::before,
+  .panel-split .col h4::after {
+    display: none !important;
+    content: none !important;
+  }
 </style>
 </head>
 <body>
