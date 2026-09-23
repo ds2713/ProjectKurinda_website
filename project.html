@@ -45,19 +45,33 @@
     text-decoration-thickness: 2px;
   }
 
-  /* Clickable research cards */
+  /* Clickable research cards: small arrow inside the box, bottom-right
+     (same look as the community page tiles; uses .tile-arrow from style.css) */
   a.feat-card {
     display: block;
+    position: relative;
+    padding-bottom: 44px;
     color: inherit;
     text-decoration: none;
   }
   a.feat-card .tile-arrow {
-    display: inline-block;
-    transition: transform .15s ease;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.7;
+    transition: transform .15s ease, opacity .15s ease;
   }
   a.feat-card:hover .tile-arrow,
   a.feat-card:focus-visible .tile-arrow {
-    transform: translateX(4px);
+    opacity: 1;
+    transform: translateX(3px);
   }
 </style>
 </head>
@@ -127,19 +141,19 @@
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z"/><path d="M3 12l9 4.5 9-4.5"/></svg>
         <h3>Satellite Earth Observation</h3>
         <p>Indicators of hydrology, vegetation and land-surface change using satellite data.</p>
-        <span class="tile-arrow">→</span>
+        <svg class="tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="feat-card dark" href="ground-sensors.html">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h4l2-7 4 14 2-7h8"/></svg>
         <h3>Ground sensors</h3>
         <p>Local readings enable the research system to include rapid feedback loops from live data.</p>
-        <span class="tile-arrow">→</span>
+        <svg class="tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a class="feat-card" href="machine-learning-model.html">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l3 3v15H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>
         <h3>Machine Learning Model</h3>
         <p>A machine learning model integrates the EO and ground sensor data to produce landslide and flood risk analysis and mapping.</p>
-        <span class="tile-arrow">→</span>
+        <svg class="tile-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
   </div>
